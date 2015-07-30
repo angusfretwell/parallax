@@ -1,0 +1,27 @@
+{
+  "name": "parallax",
+  "version": "0.1.0",
+  "description": "Straightforward parallax-scrolly background images as an ES6 module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angusfretwell/parallax.git"
+  },
+  "keywords": [
+    "parallax",
+    "scroll",
+    "ES6"
+  ],
+  "author": "Angus Fretwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angusfretwell/parallax/issues"
+  },
+  "homepage": "https://github.com/angusfretwell/parallax#readme",
+  "dependencies": {
+    "core-js": "^1.0.0"
+  }
+}
