@@ -17,19 +17,19 @@ Usage
 1. Install Parallax with npm:
 
   ```sh
-  npm install --save angusfrtwell/parallax
+  npm install --save parallax-scroll
   ```
 
 2. Import the `parallax` function:
 
   ```js
-  import { parallax } from 'parallax';
+  import { parallax } from 'parallax-scroll';
   ```
 
   Alternatively, an old-school `require()` will work:
 
   ```js
-  var parallax = require('parallax').parallax;
+  var parallax = require('parallax-scroll').parallax;
   ```
 
 3. Invoke `parallax` by passing the function a selector, and optionally a hash of options:
