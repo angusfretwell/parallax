@@ -1,7 +1,7 @@
 {
-  "name": "parallax",
+  "name": "parallax-scroll",
   "version": "0.1.0",
-  "description": "Straightforward parallax-scrolly background images as an ES6 module.",
+  "description": "Straight-forward parallax scrolling background images as an ES6 module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
