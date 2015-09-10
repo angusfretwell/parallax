@@ -4,7 +4,9 @@
   "description": "Straight-forward parallax scrolling background images as an ES6 module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint source.js",
+    "compile": "babel source.js -o index.js --stage 0",
+    "prepublish": "npm run lint && npm run compile"
   },
   "repository": {
     "type": "git",
