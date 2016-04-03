@@ -36,7 +36,7 @@ Usage
 
   ```js
   parallax('.js-parallax', {
-    speed: 0.1, // Anything over 0.5 looks silly
+    speed: 0.2, // Anything over 0.5 looks silly
   });
   ```
 
@@ -75,5 +75,7 @@ Usage
       background-position: center top;
       background-repeat: no-repeat;
       background-size: cover;
+
+      transform: translate3d(0, 0, 0);
     }
   ```
