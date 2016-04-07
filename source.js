@@ -9,12 +9,8 @@ export function parallax(selector, options) {
     speed: 0.15,
   }, options);
 
-  let elems;
-  if (typeof selector === 'string') {
-    elems = Array.from(document.querySelectorAll(selector));
-  } else {
-    elems = [selector];
-  }
+  const elems = (typeof selector === 'string'
+    ? Array.from(document.querySelectorAll(selector)) : [selector]);
 
   function updatePosition() {
     elems.forEach((elem) => {
