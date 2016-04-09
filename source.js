@@ -46,6 +46,6 @@ export function parallax(selector, options) {
     requestAnimationFrame(animate);
   }
 
-  // Start the animate
+  // Start the animation
   animate();
 }
