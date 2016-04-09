@@ -1,6 +1,6 @@
 {
   "name": "parallax-scroll",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Straight-forward parallax scrolling background images as an ES6 module",
   "main": "index.js",
   "scripts": {
