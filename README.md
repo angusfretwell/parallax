@@ -1,6 +1,9 @@
 Parallax
 ========
 
+[![NPM Version](http://img.shields.io/npm/v/parallax-scroll.svg)](https://www.npmjs.org/package/commander)
+[![NPM Downloads](https://img.shields.io/npm/dm/parallax-scroll.svg)](https://www.npmjs.org/package/commander)
+
 Straight-forward parallax scrolling background images as an ES6 module.
 
 Features
