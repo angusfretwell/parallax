@@ -32,7 +32,7 @@ Usage
   var parallax = require('parallax-scroll').parallax;
   ```
 
-3. Invoke `parallax` by passing the function a selector, and optionally a hash of options:
+3. Invoke `parallax` by passing the function a selector, DOM element, or array of DOM elements, and optionally a hash of options:
 
   ```js
   parallax('.js-parallax', {
