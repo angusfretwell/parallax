@@ -9,15 +9,18 @@ export function parallax(selector, options) {
     speed: 0.15,
   }, options);
 
-  const elems = (() => {
-    if (typeof selector === 'string') {
-      return Array.from(document.querySelectorAll(selector));
-    } else if (Array.isArray(selector)) {
-      return selector;
-    } else {
-      return [selector];
-    }
-  })();
+  let elems;
+
+  switch (typeof selector) {
+  case 'string':
+    elems = Array.from(document.querySelectorAll(selector));
+    break;
+  case 'array':
+    elems = selector;
+    break;
+  default:
+    elems = [ selector ];
+  }
 
   function updatePosition() {
     elems.forEach((elem) => {
