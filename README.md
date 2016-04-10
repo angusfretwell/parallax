@@ -1,7 +1,7 @@
 Parallax
 ========
 
-[![Travis](https://img.shields.io/travis/angusfretwell/parallax.svg)](https://travis-ci.org/angusfretwell/parallax)
+[![Travis](https://img.shields.io/travis/angusfretwell/parallax/master.svg)](https://travis-ci.org/angusfretwell/parallax)
 [![Code Climate](https://img.shields.io/codeclimate/github/angusfretwell/parallax.svg)](https://codeclimate.com/github/angusfretwell/parallax)
 [![Codecov](https://img.shields.io/codecov/c/github/angusfretwell/parallax.svg)](https://codecov.io/github/angusfretwell/parallax)
 [![NPM Version](http://img.shields.io/npm/v/parallax-scroll.svg)](https://www.npmjs.org/package/parallax-scroll)
