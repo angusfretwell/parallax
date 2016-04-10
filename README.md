@@ -26,21 +26,23 @@ Usage
 2. Import the `parallax` function:
 
   ```js
-  import { parallax } from 'parallax-scroll';
+  import parallax from 'parallax-scroll';
   ```
 
   Alternatively, an old-school `require()` will work:
 
   ```js
-  var parallax = require('parallax-scroll').parallax;
+  var parallax = require('parallax-scroll');
   ```
 
-3. Invoke `parallax` by passing the function a selector, DOM element, or array of DOM elements, and optionally a hash of options:
+3. Create a new instance of `Parallax`, passing the constructor a selector, DOM element, or array of DOM elements, and optionally a hash of options, and then call the `animate()` function on the resulting object:
 
   ```js
-  parallax('.js-parallax', {
+  const parallax = new Parallax('.js-parallax', {
     speed: 0.2, // Anything over 0.5 looks silly
   });
+
+  parallax.animate();
   ```
 
 4. Write some markup for your parallax elements:
