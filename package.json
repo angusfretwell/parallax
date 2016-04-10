@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint source.js",
-    "test": "babel-node node_modules/.bin/babel-istanbul cover _mocha",
+    "test": "babel-node node_modules/.bin/babel-istanbul cover _mocha && codecov",
     "compile": "babel --presets es2015 --plugins add-module-exports source.js -o index.js",
     "prepublish": "npm run lint && npm run compile"
   },
