@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint source.js",
-    "compile": "babel source.js -o index.js --stage 0",
+    "test": "mocha --compilers js:babel-register",
+    "compile": "babel --presets es2015 --plugins add-module-exports source.js -o index.js",
     "prepublish": "npm run lint && npm run compile"
   },
   "repository": {
