@@ -29,13 +29,13 @@ Usage
 2. Import the `parallax` function:
 
   ```js
-  import parallax from 'parallax-scroll';
+  import Parallax from 'parallax-scroll';
   ```
 
   Alternatively, an old-school `require()` will work:
 
   ```js
-  var parallax = require('parallax-scroll');
+  var Parallax = require('parallax-scroll');
   ```
 
 3. Create a new instance of `Parallax`, passing the constructor a selector, DOM element, or array of DOM elements, and optionally a hash of options, and then call the `animate()` function on the resulting object:
