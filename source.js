@@ -1,51 +1,51 @@
 import 'core-js/modules/es6.object.assign';
 import 'core-js/modules/es6.array.from';
 
-export function parallax(selector, options) {
-  let lastPosition = -1;
+export default class Parallax {
+  constructor(selector, options) {
+    this.lastPosition = -1;
 
-  // Establish default settings
-  const settings = Object.assign({
-    speed: 0.15,
-  }, options);
+    // Establish default settings
+    this.settings = Object.assign({
+      speed: 0.2,
+    }, options);
 
-  let elems;
-
-  switch (typeof selector) {
-  case 'string':
-    elems = Array.from(document.querySelectorAll(selector));
-    break;
-  case 'array':
-    elems = selector;
-    break;
-  default:
-    elems = [ selector ];
+    if (typeof selector === 'string') {
+      this.elems = Array.from(document.querySelectorAll(selector));
+    } else if (Array.isArray(selector)) {
+      this.elems = selector;
+    } else {
+      this.elems = [selector];
+    }
   }
 
-  function updatePosition() {
-    elems.forEach((elem) => {
-      const offset = elem.getBoundingClientRect().top + lastPosition;
-      const yPosition = Math.round((offset - lastPosition) * settings.speed);
+  updatePosition() {
+    this.elems.forEach((elem) => {
+      const offset = elem.getBoundingClientRect().top + this.lastPosition;
+      const yPosition = Math.round((offset - this.lastPosition) * this.settings.speed);
 
       // Apply the y-axis transform
       elem.style.transform = `translate3d(0, ${yPosition * -1}px, 0)`; // eslint-disable-line
     });
   }
 
-  function animate() {
+  animate() {
     // If the offset position hasn't changed, skip this frame
-    if (lastPosition === window.pageYOffset) {
-      requestAnimationFrame(animate);
+    if (this.lastPosition === window.pageYOffset) {
+      window.requestAnimationFrame(() => {
+        this.animate();
+      });
+
       return false;
     }
 
     // Save the new offset position
-    lastPosition = window.pageYOffset;
+    this.lastPosition = window.pageYOffset;
 
-    updatePosition();
-    requestAnimationFrame(animate);
+    this.updatePosition();
+
+    return window.requestAnimationFrame(() => {
+      this.animate();
+    });
   }
-
-  // Start the animation
-  animate();
 }
