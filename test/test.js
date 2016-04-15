@@ -65,5 +65,13 @@ describe('parallax', () => {
       p.animate();
       p.lastPosition.should.equal(0);
     });
+
+    it('should update element\'s transform', () => {
+      const elem = document.createElement('div');
+      const p = new Parallax(elem);
+      p.elems[0].style.should.not.have.keys('transform');
+      p.animate();
+      p.elems[0].style.transform.should.equal('translate3d(0, 0px, 0)');
+    });
   });
 });
