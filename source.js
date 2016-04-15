@@ -54,11 +54,9 @@ export default class Parallax {
     });
   }
 
-  setVendorStyle(e, prop, value) {
-    const elem = e;
-    elem.style[`webkit${prop}`] = value;
-    elem.style[`moz${prop}`] = value;
-    elem.style[`ms${prop}`] = value;
-    elem.style[`o${prop}`] = value;
+  setVendorStyle(elem, prop, value) {
+    ['webkit', 'moz', 'ms', 'o'].forEach((prefix) => {
+      elem.style[`${prefix}${prop}`] = value; // eslint-disable-line
+    });
   }
 }
