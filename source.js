@@ -29,7 +29,7 @@ export default class Parallax {
       elem.style.transform = `translate3d(0, ${yPosition * -1}px, 0)`; // eslint-disable-line
 
       if (this.settings.prefix) {
-        this.setVendorStyle(elem, 'transform', `translate3d(0, ${yPosition * -1}px, 0)`);
+        this.setVendorStyle(elem, 'Transform', `translate3d(0, ${yPosition * -1}px, 0)`);
       }
     });
   }
