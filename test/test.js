@@ -73,5 +73,19 @@ describe('parallax', () => {
       p.animate();
       p.elems[0].style.transform.should.equal('translate3d(0, 0px, 0)');
     });
+
+    it('should vendor prefix transform', () => {
+      const elem = document.createElement('div');
+      const p = new Parallax(elem, {
+        prefix: true,
+      });
+      p.animate();
+      p.elems[0].style.should.have.properties([
+        'oTransform',
+        'msTransform',
+        'mozTransform',
+        'webkitTransform',
+      ]);
+    });
   });
 });
