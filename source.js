@@ -54,7 +54,8 @@ export default class Parallax {
     });
   }
 
-  setVendorStyle(elem, prop, value) {
+  setVendorStyle(e, prop, value) {
+    const elem = e;
     elem.style[`webkit${prop}`] = value;
     elem.style[`moz${prop}`] = value;
     elem.style[`ms${prop}`] = value;
