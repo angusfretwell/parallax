@@ -8,6 +8,7 @@ export default class Parallax {
     // Establish default settings
     this.settings = Object.assign({
       speed: 0.2,
+      prefix: false,
     }, options);
 
     if (typeof selector === 'string') {
@@ -26,6 +27,10 @@ export default class Parallax {
 
       // Apply the y-axis transform
       elem.style.transform = `translate3d(0, ${yPosition * -1}px, 0)`; // eslint-disable-line
+
+      if (this.settings.prefix) {
+        this.setVendorStyle(elem, 'Transform', `translate3d(0, ${yPosition * -1}px, 0)`);
+      }
     });
   }
 
@@ -46,6 +51,12 @@ export default class Parallax {
 
     return window.requestAnimationFrame(() => {
       this.animate();
+    });
+  }
+
+  setVendorStyle(elem, prop, value) {
+    ['webkit', 'moz', 'ms', 'o'].forEach((prefix) => {
+      elem.style[`${prefix}${prop}`] = value; // eslint-disable-line
     });
   }
 }
